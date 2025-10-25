@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Renée | AI & Data Science</title>
+<meta name="description" content="Freelancer · Soon-to-be founder · Turning ideas into innovation">
+
+<style>
+:root{
+  --bg:#0a0a0a;
+  --card:#1c1c1c;
+  --accent:#e1064f; /* cherry red */
+  --text:#f5f5f5;
+}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;background:var(--bg);color:var(--text);display:flex;align-items:center;justify-content:center;min-height:100vh;padding:2rem;overflow:hidden}
+.container{width:100%;max-width:420px;position:relative}
+h1{font-size:1.6rem;margin:0 0 .25rem;background:linear-gradient(90deg,var(--accent),#ff608c);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.tagline{margin:0 0 2.2rem;opacity:.8}
+a.button{display:block;background:var(--card);border:2px solid #444;border-radius:14px;padding:1rem 1.2rem;margin:.75rem 0;text-align:center;color:var(--text);text-decoration:none;transition:.25s;position:relative;font-weight:600;letter-spacing:.5px}
+a.button:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-4px) scale(1.03);box-shadow:0 8px 20px -8px var(--accent)}
+footer{text-align:center;margin-top:2.5rem;font-size:.65rem;opacity:.5}
+
+/* ---------- pop-up mascot ---------- */
+#mascot{position:fixed;bottom:-300px;right:20px;width:140px;height:140px;background:url('https://assets.codepen.io/605876/hellokitty.gif') center/cover no-repeat;filter:drop-shadow(0 0 10px var(--accent));transition:bottom .6s cubic-bezier(.68,-.55,.27,1.55)}
+#mascot.bounce-in{bottom:20px}
+.speech-bubble{position:absolute;top:-55px;left:-125px;background:var(--accent);color:#fff;padding:10px 14px;border-radius:16px;font-size:.8rem;width:130px;text-align:center;opacity:0;transform:scale(.7);transition:.3s}
+#mascot.bounce-in .speech-bubble{opacity:1;transform:scale(1)}
+.speech-bubble::after{content:"";position:absolute;bottom:-8px;right:20px;width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid var(--accent)}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <h1>Rathee Meenatchi “Renée”</h1>
+  <p class="tagline">B.Tech AI & Data Science fresh grad → freelancer → soon-to-be startup founder turning ideas into innovation.</p>
+
+  <a class="button" href="https://github.com/RatheeMP" target="_blank">GitHub</a>
+  <a class="button" href="https://www.linkedin.com/in/rathee-meenatchi-508a36258" target="_blank">LinkedIn</a>
+  <a class="button" href="resume.pdf" target="_blank">Résumé (upload later)</a>
+  <a class="button" href="mailto:Ratheem.pandiyaraj@gmail.com">Email</a>
+</div>
+
+<!-- ---------------  MASCOT  --------------- -->
+<div id="mascot">
+  <div class="speech-bubble">Hiiii ~ ✨<br>Let’s build cool stuff!</div>
+</div>
+
+<script>
+setTimeout(()=> document.getElementById('mascot').classList.add('bounce-in'), 1200);
+document.getElementById('mascot').onclick = function(){this.style.display='none'};
+</script>
+</body>
+</html>
